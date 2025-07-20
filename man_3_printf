@@ -1,0 +1,80 @@
+
+.TH _PRINTF 3 "March 2025" "Custom _printf Manual" "Library Functions"
+.SH NAME
+_printf \- custom implementation of the printf function
+
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+.B _printf
+is a custom implementation of the standard printf function in C. It formats and prints data to the standard output.
+
+.SH PARAMETERS
+.TP
+.B format
+A format string containing characters to be printed as well as format specifiers beginning with '%'.
+.TP
+.B ...
+A variable number of arguments corresponding to the format specifiers in the format string.
+
+.SH RETURN VALUE
+.B _printf
+returns the total number of characters printed (excluding the null terminator). If an error occurs, it returns -1.
+
+.SH SUPPORTED FORMAT SPECIFIERS
+The following format specifiers are supported:
+.TP
+.B %c
+Prints a single character.
+.TP
+.B %s
+Prints a string.
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+.TP
+.B %%
+Prints a percent sign.
+
+.SH EXAMPLES
+.B Example 1: Printing a string
+.RS
+.nf
+#include "main.h"
+
+int main(void)
+{
+    _printf("Hello, %s!\n", "World");
+    return (0);
+}
+.fi
+.RE
+
+.B Example 2: Printing an integer
+.RS
+.nf
+#include "main.h"
+
+int main(void)
+{
+    _printf("Value: %d\n", 42);
+    return (0);
+}
+.fi
+.RE
+
+.SH LIMITATIONS
+.B _printf
+currently supports only a limited number of format specifiers and does not handle floating-point numbers or complex formatting features like width and precision.
+
+.SH AUTHOR
+Custom implementation by User.
+
+.SH BUGS
+Report any issues to the developer for future improvements.
+
+.SH SEE ALSO
+.BR printf (3)
