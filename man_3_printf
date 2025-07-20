@@ -1,5 +1,5 @@
 
-.TH _PRINTF 3 "March 2025" "Custom _printf Manual" "Library Functions"
+.TH _PRINTF 3 "Custom _printf Manual" "Library Functions"
 .SH NAME
 _printf \- custom implementation of the printf function
 

@@ -1,11 +1,9 @@
 #include "main.h"
 #include <stdarg.h>
 
-#include "main.h"
-
 /**
 * print_number - Recursively prints an integer using _putchar
-* @n: The integer to print
+* @n: integer to print
 * Return: Number of characters printed
 */
 int print_number(int n)
@@ -38,7 +36,7 @@ return (count);
 /**
 * handle_specifier - Handles format specifiers in _printf
 * @format: The format specifier
-* @args: The va_list of arguments
+* @args: va_list of arguments
 * Return: Number of characters printed
 */
 int handle_specifier(char format, va_list args)
@@ -106,7 +104,7 @@ return (count);
 
 /**
 * print_percent - Prints the '%' character
-* @args: The va_list (not used here, but required for compatibility)
+* @args: va_list (not used here, but required for compatibility)
 * Return: Number of characters printed (always 1 for '%')
 */
 int print_percent(va_list args)
@@ -117,7 +115,7 @@ return (_putchar('%'));
 
 /**
 * print_int - Prints an integer using print_number
-* @args: The va_list of arguments
+* @args: va_list of arguments
 * Return: Number of characters printed
 */
 int print_int(va_list args)
